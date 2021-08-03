@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">FinalProjectMobileBidSystem</string>
+    <string name="username">UserName</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="log_out">Log Out</string>
+    <string name="search">Search...</string>
+    <string name="name">name</string>
+    <string name="productimage">productImage</string>
+    <string name="due_date_12_12_2020">Due Date: 12/12/2020</string>
+    <string name="current_highest_bid">Current Highest bid: $##.##</string>
+    <string name="departments">Departments:</string>
+    <string name="description">Description:</string>
+    <string name="your_bid">Your Bid Offer: $</string>
+    <string name="make_bid">Make Bid</string>
+    <string name="example_val">0.00</string>
+</resources>

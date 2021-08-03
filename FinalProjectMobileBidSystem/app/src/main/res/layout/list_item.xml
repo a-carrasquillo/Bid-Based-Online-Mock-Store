@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="116dp"
+        android:layout_height="75dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="19dp"
+        android:contentDescription="productImage"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="172dp"
+        android:layout_height="33dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="185dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/itemCurrentBid"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/itemName"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="185dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/itemDepartments"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/itemName"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="185dp"
+        android:text="TextView" />
+</RelativeLayout>
