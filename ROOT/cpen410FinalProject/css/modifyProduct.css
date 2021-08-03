@@ -1,0 +1,371 @@
+* { margin: 0; padding: 0; }
+
+body { 
+    font-family: "Times New Roman", Times, arial, serif, sans-serif; 
+    background-color: rgb(59, 191, 151);
+}
+
+/*Header of the page Section*/
+.header {
+    z-index: 200;
+    background-color:rgb(176, 221, 226);
+    width:100%;
+    height:15%; 
+    position: fixed;
+    top:0%;
+    text-align: center;
+    font-size: 25px;
+    cursor: default;
+}
+
+.header_icon {
+    position: absolute;
+    height: 80%;
+    top: 10%;
+    left: 2%;
+    border-radius: 20px;
+}
+
+.header h1 {
+    position: relative;
+    top: 28%;
+}
+
+.nube {
+    position: absolute;
+    height: 30%;
+    top: 35%;
+}
+
+#nube1 { left: 11%; }
+
+#nube2 { left: 16%; }
+
+#nube5 { right: 16%; }
+
+#nube6 { right: 11%; }
+
+#nube7 { right: 6%; }
+
+#nube8 { right: 1%; }
+
+/*Background Images Section*/
+.background {
+    position: fixed;
+    width: 30%;
+    top: 15%;
+    height: 85%;
+}
+
+#left_side {
+    left: 0%;
+} 
+
+#right_side {
+    right: 0%;
+}
+
+/*Information Section*/
+.center_square {
+    margin-top: 10%;
+    margin-bottom: 2%;
+    left: 33.5%;
+    width: 34%;
+    min-height: 100%;
+    z-index: 100;
+    position: absolute;
+    text-align: left;
+    background-color: white;
+    border-radius: 20px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;  
+}
+
+form h1 {
+    position: relative;
+    margin-top: 3%;
+    text-align: center;
+}
+    /*Error Message Section*/
+#errorEmpty {
+    position: relative;
+    color: red;
+    font-size: 0.8vw;
+    width: 100%;
+    padding: 1%;
+    text-align: center;
+    border-color: none;
+    border-width: 0px;
+    background-color: none;
+    font-weight: bold;
+    z-index: 100;
+    background-color: transparent;
+    font-family: "Times New Roman";
+}
+
+.row {
+    margin-top: 2.5%;
+    margin-left: 6%;
+    font-size: 1.1vw;
+}
+/*Product Name Section*/
+#productName {
+    position: relative;
+    border: 1.5px solid #333;
+    width: 70.5%;
+    margin-left: 1%;
+    font-size: 1.25vw;
+    text-align: center;
+    font-family: "Times New Roman", Times, arial, serif, sans-serif;
+    border-radius: 5px;
+    padding-bottom: 0.5%;
+    padding-top: 0.5%;
+}
+
+/*Bid Section*/
+#initialBid{
+    left: 0%;
+    position: relative;
+}
+
+#bidTag {
+    position: absolute;
+    margin-top: 1%;
+}
+
+.currency {
+    position: absolute;
+    width: 75%;
+    margin-left: 19%;
+    height: 10%;
+    display: inline-flex;
+}
+
+.currencySign {
+    position: absolute;
+    font-size: 1.5vw;
+    padding: 0 5px 0 20px;
+    color: #333;
+    border: 2px solid #333;
+    border-right: 0;
+    border-radius: 5px 0 0 5px;
+    background: white;
+    cursor: default;
+    left: 7.5%;
+}
+
+#currency_field {
+    position: absolute;
+    font-size: 1.5vw;
+    padding: 0 10px 0 20px;
+    color: #333;
+    border: 2px solid #333;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: white;
+    width: 79%;
+    left: 16.5%;
+    border-left: 0;
+    font-family: "Times New Roman";
+}
+
+#currency_field:focus {
+    outline: none;
+}
+
+/*Picture Section*/
+#pictureTag {
+    position: absolute;
+    margin-top: 9%;
+}
+
+#productActualImage {
+    position: relative;
+    height: auto;
+    width: 60%;
+    margin-left: 30.5%;
+    margin-top: 10%;
+    border-radius: 5px;
+}
+
+#productImage {
+    position: relative;
+    height: 100%;
+    width: 71%;
+    margin-left: 27%;
+    font-size: 1vw;
+    text-align: center;
+    font-family: "Times New Roman", Times, arial, serif, sans-serif;
+    border-radius: 5px;
+    padding-top: 1.5%;
+    left: -2%;
+}
+
+/*Due Date Section*/
+#dueDate {
+    position: relative;
+    height: 100%;
+    border: 1.5px solid #333;
+    width: 70%;
+    margin-left: 11%;
+    font-size: 1.25vw;
+    text-align: center;
+    font-family: "Times New Roman", Times, arial, serif, sans-serif;
+    border-radius: 5px;
+    padding-bottom: 0.5%;
+    padding-top: 0.5%;
+    left: -2%;
+}
+
+/*Description Section*/
+#description {
+    position: relative;
+    border: 1.5px solid #333;
+    border-radius: 5px;
+    font-size: 1.25vw;
+    text-align: justify;
+    font-family: "Times New Roman", Times, arial, serif, sans-serif;
+    width: 68%;
+    left: 25%;
+    padding: 1%;
+}
+
+#descTag {
+    position: absolute;
+}
+
+#desc{
+  left: 0%;
+    position: relative;
+}
+
+/*Departments Section*/
+.checkboxes {
+    position: relative;
+    width: 95%;
+    border: none;
+}
+
+input[type=checkbox], label {
+    cursor: pointer;
+}
+
+td {
+    border: 4px solid transparent;
+}
+
+/*Checkbox to activate product*/
+#activateProduct{
+    position: relative;
+    margin-left:  9%;
+    margin-top: 5%;
+}
+
+#activateProduct:hover {
+    cursor: pointer;
+}
+
+#activateProductTag {
+    font-size: 1.1vw;
+}
+
+/*Form Buttons*/
+.buttons {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    left: -2%;
+    position: relative;
+    width: 100%;
+}
+
+#cancel, #cancel:hover {
+    color: white;
+    font-size: 1.25vw;
+    position: relative;
+    left: 8%;
+    height: 100%;
+    width:calc(40% - 40px);
+    background-color: red;
+    border-radius: 20px;
+    font-family: "Times New Roman";
+    cursor: pointer;
+    border: none;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+    
+}
+
+#submit, #submit:hover {
+    color: white;
+    font-size: 1.25vw;
+    position: relative;
+    left: 30%;
+    height: 100%;
+    width:calc(40% - 40px);
+    background-color: green;
+    border-radius: 20px;
+    font-family: "Times New Roman";
+    cursor: pointer;
+    border: none;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+}
+
+#submit:hover {
+    background-color: darkgreen;
+}
+
+#cancel:hover {
+    background-color: darkred;
+}
+
+#submit:active {
+    background-color: darkgreen;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}
+
+#cancel:active {
+    background-color: darkred;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}
+
+/*Logout/Sign-out Section*/
+#logout, #logout:hover {
+    position: fixed;
+    right: 2%;
+    top: 18%;
+    font-size: 1.2vw;
+    z-index: 200;
+    background-color: white;
+    height: 5%;
+    width: 6%;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+}
+
+#logout:hover {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+#logout:active {
+    background-color: cornflowerblue;
+    color: white;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}

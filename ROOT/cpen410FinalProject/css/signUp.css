@@ -1,0 +1,217 @@
+* { margin: 0; padding: 0; }
+
+body { 
+    font-family: "Times New Roman", Times, arial, serif, sans-serif; 
+    background-color: rgb(59, 191, 151);
+}
+
+/*Header of the page Section*/
+.header {
+    z-index:100;
+    background-color:rgb(176, 221, 226);
+    width:100%;
+    height:15%; 
+    position:absolute;
+    top:0%;
+    text-align: center;
+    font-size: 25px;
+}
+
+.header_icon {
+    position: absolute;
+    height: 80%;
+    top: 10%;
+    left: 2%;
+    border-radius: 20px;
+}
+
+.header h1 {
+    position: relative;
+    top: 28%;
+    z-index: 100;
+}
+
+.nube {
+    position: absolute;
+    height: 30%;
+    top: 35%;
+}
+
+#nube1 { left: 11%; }
+
+#nube2 { left: 16%; }
+
+#nube3 { left: 21%; }
+
+#nube4 { right: 21%; }
+
+#nube5 { right: 16%; }
+
+#nube6 { right: 11%; }
+
+#nube7 { right: 6%; }
+
+#nube8 { right: 1%; }
+
+/*Background Section*/
+.background {
+    position: absolute;
+    width: 30%;
+    top: 15%;
+    height: 85%;
+}
+
+#left_side {left: 0%;} 
+
+#right_side {right: 0%;}
+
+/*Section where the information is shown*/
+.center {
+    z-index: 100;
+    position: absolute;
+    position:absolute;
+    top: 28%;
+    right: 35%;
+    background-color: white;
+    height: 60%;
+    width: 25%;
+    border-radius: 20px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+}
+
+.row#top {padding-top: 10%;}
+
+.row {
+    padding-top: 6%;
+    padding-left: 6%;
+    font-size: 1.1vw;
+}
+
+/*Information and errors Formats*/
+#completeName, #userEmail, #userName, #userPass,#userPassConfirm, #telephone, #postalAddress {
+    position: relative;
+    height: 100%;
+    border: 1.5px solid #555;
+    width: 71%;
+    left: 8.5%;
+    font-size: 1.25vw;
+    text-align: center;
+    font-family: "Times New Roman", Times, arial, serif, sans-serif;
+}
+
+#errorEmail, #errorPassword, #errorUsername {
+    position: fixed;
+    color: red;
+    font-size: 0.8vw;
+    width: 20%;
+    text-align: center;
+    border-color: none;
+    border-width: 0px;
+    background-color: none;
+    left: 42%;
+    font-weight: bold;
+}
+
+#errorEmpty {
+    position: fixed;
+    color: red;
+    font-size: 0.8vw;
+    width: 15%;
+    text-align: center;
+    border-color: none;
+    border-width: 0px;
+    background-color: none;
+    left: 45%;
+    top: 30%;
+    font-weight: bold;
+}
+
+#userName {left: 0.5%;}
+
+#userPass {left: 2%;}
+
+#userPassConfirm {
+    width: 55%;
+    left: 0%;
+}
+
+#telephone {
+    width:70.5%;
+    left: 2%;
+}
+
+#postalAddress {
+    width:95%;
+    left: 0%;
+    margin-top: 2%;
+}
+
+/*Buttons Section*/
+.buttons {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+}
+
+#cancel, #cancel:hover {
+    position: relative;
+    left: 8%;
+    padding-bottom: 0.5%;
+    padding-top: 0.5%;
+    font-size: 1.25vw;
+    background-color: red;
+    color: white;
+    height: 100%;
+    width:calc(40% - 40px);    
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+}
+
+#submit, #submit:hover {
+    position: relative;
+    left: 30%;
+    padding-bottom: 0.5%;
+    padding-top: 0.5%;
+    font-size: 1.25vw;
+    background-color: green;
+    color: white;    
+    height: 100%;
+    width:calc(40% - 40px);
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+}
+
+#submit:hover {
+    background-color: darkgreen;
+}
+
+#cancel:hover {
+    background-color: darkred;
+}
+
+#submit:active {
+    background-color: darkgreen;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}
+
+#cancel:active {
+    background-color: darkred;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}
