@@ -40,14 +40,14 @@ The page flow indicates where you can go from a specific web page and the requir
 
 <b>Environment variables:</b><br>
 CATALINA is an environment variable indicating the location of TOMCAT in the system. While the classpath variable value should have the following:<br>
-.;
-%CATALINA%\lib\servlet-api.jar;
-%CATALINA%\webapps\ROOT\WEB-INF\classes\;
-%CATALINA%\lib\mysql-connector-java-8.0.19.jar;
-%CATALINA%\lib\commons-codec-1.11.jar;
-%CATALINA%\lib\commons-fileupload-1.4.jar;
-%CATALINA%\lib\commons-io-2.6.jar;
-%CATALINA%\lib\java-json.jar;
+.;<br>
+%CATALINA%\lib\servlet-api.jar;<br>
+%CATALINA%\webapps\ROOT\WEB-INF\classes\;<br>
+%CATALINA%\lib\mysql-connector-java-8.0.19.jar;<br>
+%CATALINA%\lib\commons-codec-1.11.jar;<br>
+%CATALINA%\lib\commons-fileupload-1.4.jar;<br>
+%CATALINA%\lib\commons-io-2.6.jar;<br>
+%CATALINA%\lib\java-json.jar;<br>
 
 <h1>This project is for educational purposes only!</h1>
 Copyright Disclaimer under section 107 of the Copyright Act 1976, allowance is made for “fair use” for purposes such as criticism, comment, news reporting, teaching, scholarship, education and research.
