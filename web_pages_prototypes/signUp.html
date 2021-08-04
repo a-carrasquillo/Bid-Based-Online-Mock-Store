@@ -1,0 +1,67 @@
+<!doctype html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Heaven of Bids Signup Page">
+        <meta name="keywords" content="bid, Heaven of Bids, bids, puerto rico, bid web page, offers, discounts, good prices, signup">
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <title>Heaven of Bids Signup</title>
+        <link rel="stylesheet" type="text/css" href="css/signUp.css">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    </head>
+    <body>
+        <div class="header">
+            <!--Small Bid Icon-->
+            <img class = "header_icon" src="images/BID.jpg"> 
+            <!--Left side clouds-->
+            <img class = "nube" id="nube1" src="images/nube.png">
+            <img class = "nube" id="nube2" src="images/nube.png">
+            <img class = "nube" id="nube3" src="images/nube.png">
+            <!--Central message-->
+            <h1>Please Signup to enter the Heaven of Bids</h1>
+            <!--Right side clouds-->
+            <img class = "nube" id="nube4" src="images/nube.png">
+            <img class = "nube" id="nube5" src="images/nube.png">
+            <img class = "nube" id="nube6" src="images/nube.png">
+            <img class = "nube" id="nube7" src="images/nube.png">
+            <img class = "nube" id="nube8" src="images/nube.png">
+        </div>
+        <div class="left_side">
+            <img class = "background" id="left_side" src="images/Bids_part1.png">
+        </div>
+        <div class="center">
+            <form id="signup" action="createAccount.jsp" method="post">
+                <input type="text" id="errorEmpty" name="errorEmpty" readonly value="">
+                <!--Name Section-->
+                <div class="row" id="top"><span><b>Name: </b></span>
+                <input type="text" id="completeName" name="completeName" placeholder="Enter your complete name" maxlength="30" required></div>
+                <!--Email Section-->
+                <div class="row"><span><b>Email: </b></span>
+                <input type="email" id="userEmail" name="userEmail" placeholder="Enter your email" maxlength="45" required> <span id="errorEmail"></span></div>
+                <!--Username Section-->
+                <div class="row"><span><b>Username: </b></span>
+                <input type="text" id="userName" name="userName" placeholder="Enter an username" maxlength="20" required> <span id="errorUsername"></span></div>
+                <!--Password Section-->
+                <div class="row"><span><b>Password: </b></span>
+                <input type="password" id="userPass" name="userPass" placeholder="Enter a password" required></div>
+                <!--Confirm Password Section-->
+                <div class="row"><span><b>Confirm Password: </b></span>
+                <input type="password" id="userPassConfirm" name="userPassConfirm" placeholder="Reenter the password" required> <span id="errorPassword"></span></div>
+                <!--Telephone Section-->
+                <div class="row"><span><b>Telephone: </b></span>
+                <input type="tel" id="telephone" name="telephone" placeholder="Enter your telephone" pattern="([0-9]{3})-[0-9]{3}-[0-9]{4}" maxlength="15" required></div>
+                <!--Postal Address Section-->
+                <div class="row"><span><b>Postal Address: </b></span>
+                <textarea id="postalAddress" name="postalAddress" placeholder="Enter your Postal Address" maxlength="50" required></textarea> </div>
+                <!--Buttons-->
+                <div class="buttons">
+                    <button id ="cancel" type="button" onclick="window.location.href='login.html';">Cancel</button>
+                    <button id ="submit" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="right_side">
+            <img class = "background" id="right_side" src="images/Bids_part2.png">
+        </div>
+    </body>
+</html>

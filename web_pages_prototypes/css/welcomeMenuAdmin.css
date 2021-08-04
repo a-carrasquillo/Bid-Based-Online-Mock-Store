@@ -1,0 +1,160 @@
+* { margin: 0; padding: 0; }
+
+body { 
+    font-family: "Times New Roman", Times, arial, serif, sans-serif; 
+    background-color: rgb(59, 191, 151);
+}
+
+.header {
+    position:absolute;
+    z-index:100;
+    background-color:rgb(176, 221, 226);
+    width:100%;
+    height:15%; 
+    top:0%;
+    text-align: center;
+    font-size: 25px;
+    cursor: default;
+}
+
+.header#admin {
+    position: fixed;
+    z-index: 200;
+}
+
+.header_icon {
+    position: absolute;
+    height: 80%;
+    top: 10%;
+    left: 2%;
+    border-radius: 20px;
+}
+
+.header h1 {
+    position: relative;
+    top: 28%;
+    z-index: 100;
+}
+
+.nube {
+    position: absolute;
+    height: 30%;
+    top: 35%;
+}
+
+#nube1 { left: 11%; }
+
+#nube2 { left: 16%; }
+
+#nube5 { right: 16%; }
+
+#nube6 { right: 11%; }
+
+#nube7 { right: 6%; }
+
+#nube8 { right: 1%; }
+
+.background {
+    position: fixed;
+    width: 70%;
+    height: 100%;
+    right: 0%;
+}
+
+.right_side_square {
+    position: relative;
+    margin-left: 30%;
+}
+
+.left_side_square {
+    position: fixed;
+    margin-top: 8%;
+    margin-left: 0.5%;
+    width: 30%;
+    height: 83%;
+    z-index: 200;
+    background-color: white;
+    border-radius: 20px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+    overflow: auto;
+}
+
+.left_side_square h1 {
+    text-align: center;
+    margin-top: 3%;
+    cursor: default;
+}
+
+.left_side_square h2 {
+    text-align:left;
+}
+
+/*Logout*/
+.logout, .logout:hover {
+    position: absolute;
+    right: 2%;
+    top: 18%;
+    font-size: 1.2vw;
+    z-index: 200;
+    background-color: white;
+    height: 5%;
+    width: 6%;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+}
+
+.logout#admin, .logout#admin:hover {
+    position: fixed;
+}
+
+.logout:hover {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.logout:active {
+    background-color: cornflowerblue;
+    color: white;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}
+
+h2.optionClassTag {
+    position: relative;
+    margin-top: 5%;
+    margin-left: 10%;
+    cursor: default;
+}
+
+button.option{
+    position: relative;
+    display: block;
+    margin-left: 10%;
+    padding-left: 5%;
+    margin-top: 2%;
+    font-family: "Times New Roman";
+    font-size: 1.1vw;
+    width: 80%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: left;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button.option:hover {
+    background-color:darkseagreen;
+    text-decoration: underline;
+}

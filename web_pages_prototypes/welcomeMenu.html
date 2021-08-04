@@ -1,0 +1,71 @@
+<!doctype html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <link rel="stylesheet" type="text/css" href="css/welcomeMenu.css">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <!-- Load icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Heaven of Bids</title>
+    </head>
+    <body>
+        <div class="header">
+            <!--Small Bid Icon-->
+            <img class = "header_icon" src="images/BID.jpg"> 
+            <!--Left side clouds-->
+            <img class = "nube" id="nube1" src="images/nube.png">
+            <img class = "nube" id="nube2" src="images/nube.png">
+            <!--Central message-->
+            <h1>Welcome &lt;name&gt; to the Heaven of Bids</h1>
+            <!--Right side clouds-->
+            <img class = "nube" id="nube5" src="images/nube.png">
+            <img class = "nube" id="nube6" src="images/nube.png">
+            <img class = "nube" id="nube7" src="images/nube.png">
+            <img class = "nube" id="nube8" src="images/nube.png">
+        </div>
+        <!--Log out button-->
+        <button class ="logout" type="button" onclick="window.location.href='login.html';">Sign out</button>
+        
+        <div class="sell">
+            <h2 id="sellHeader">Want to become part of Heaven of Bids?</h2>
+            <a id="sell_Link" href="sellProduct.html" ><b>Click Here to Sell a Product</b></a>
+        </div>
+        <div class="search_bar">
+            <form id="search" action="search.jsp" method="post">
+                <input type="text" placeholder="Search a product..." name="search" class="search">
+                <select name="search_filter" class="search_filter">
+                    <option value="">All Departments</option>
+                    <option value="Books">Books</option>
+                    <option value="Toys&Games">Toys&amp;Games</option>
+                    <option value="Videogames">Videogames</option>
+                </select>
+                <button type="submit" class="search_button"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <div class="results_area" id="top">
+            <h2 id="noResultInfo">Products will be shown here when you perform a search.</h2>
+        </div>
+        <div class="results_area">
+            <form class="product" action="detailsProducts.html" method="post">
+                <input type="hidden" class="ID" name="ID" value="#">
+                <button type="submit" class="product_name">Product 1</button>
+                <input type="text" class="bid" name="bid" readonly value="Highest Bid: $##.##">
+                <input type="text" class="departments" name="departments" readonly value="Department: Computer, Electronics, Garden">
+                <img src="images/bidMan.png">
+            </form>
+        </div>
+        <div class="results_area">
+            <h2 id="noResultInfo">Products will be shown here when you perform a search.</h2>
+        </div>
+        <div class="results_area">
+            <h2 id="noResultInfo">Products will be shown here when you perform a search.</h2>
+        </div>
+        <div class="results_area">
+            <h2 id="noResultInfo">Products will be shown here when you perform a search.</h2>
+        </div>
+        <div class="results_area" id="bottom">
+            <h2 id="noResultInfo">Products will be shown here when you perform a search.</h2>
+        </div>
+    </body>
+</html>

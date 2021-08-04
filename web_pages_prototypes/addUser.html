@@ -1,0 +1,145 @@
+<!doctype html> 
+<html>
+    <head>
+        <meta charset="utf-8">        
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <title>Heaven of Bids Administration</title>
+        <link rel="stylesheet" type="text/css" href="css/addUser.css">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        
+        <!--Script to validate the email and the password with confirm password-->
+        <script>
+            function checkform() {
+                "use strict";
+                //Retrieving the value in the email box
+                var emailVal = document.signup.userEmail.value;
+                //Check if the email does not have the @
+                if(!emailVal.includes("@")) {
+                    //Show the error
+                    document.getElementById("errorEmail").value = "Emails must contain @";
+                    //Make the cursor go to the email box
+                    document.signup.userEmail.focus();
+                } else {
+                    //There is no error in the email, hence, we empty the error message
+                    document.getElementById("errorEmail").value = "";
+                }
+                //Retrieving the password and the confirmation of the password
+                var pass = document.signup.userPass.value;
+                var passConf = document.signup.userPassConfirm.value;
+                //Verify if the password is not the same as the confirmation password
+                if(pass!==passConf) {
+                    //Show the error message
+                    document.getElementById("errorPassword").value = "Passwords don't match!";
+                    //if there is no problem with the email, move the cursor to the confirm password box
+                    if(emailVal.includes("@")){
+                        document.signup.userPassConfirm.focus();
+                    }
+                } else {
+                    //if the passwords are the same, empty the error message
+                    document.getElementById("errorPassword").value = "";
+                }
+                //if there is any kind of problem return false, else, true. 
+                if(!emailVal.includes("@") || pass!=passConf){
+                   return false;
+                } else {
+                    return true;   
+                }
+            }
+        </script>
+        
+    </head>
+    <body>
+        <div class="header">
+            <!--Small Bid Icon-->
+            <img class = "header_icon" src="images/BID.jpg"> 
+            <!--Left side clouds-->
+            <img class = "nube" id="nube1" src="images/nube.png">
+            <img class = "nube" id="nube2" src="images/nube.png">
+            <!--img class = "nube" id="nube3" src="images/nube.png"-->
+            <!--Central message-->
+            <h1>Welcome &lt;Admin&gt; to the Heaven of Bids</h1>
+            <!--Right side clouds-->
+            <!--img class = "nube" id="nube4" src="images/nube.png"-->
+            <img class = "nube" id="nube5" src="images/nube.png">
+            <img class = "nube" id="nube6" src="images/nube.png">
+            <img class = "nube" id="nube7" src="images/nube.png">
+            <img class = "nube" id="nube8" src="images/nube.png">
+        </div>
+        
+        <!--Log out button-->
+        <button id ="logout" type="button" onclick="window.location.href='login.html';">Sign out</button>
+        
+        <div class = "left_side_square">
+            <!--Central message of the left side square-->
+            <h1>Administrator Operations</h1> 
+            <!--Options that the Administrator can choose from-->    
+            <h2 class="optionClassTag">User Management:</h2> 
+                <button class="option" type="button" id="active">Add User</button>
+                <button class="option" type="button" onclick="window.location.href='listUsers.html';">List Of User</button>
+            
+            <h2 class="optionClassTag">Product Management:</h2> 
+                <button class="option" type="button" onclick="window.location.href='sellProductAdmin.html';" >Add Product</button>
+                <button class="option" type="button" onclick="window.location.href='listProducts.html';">List Of Products</button>
+            
+            <h2 class="optionClassTag">Department Management:</h2>
+                <button class="option" type="button" onclick="window.location.href='addDepartment.html';">Add Department</button>
+                <button class="option" type="button" onclick="window.location.href='listDepartments.html';">List Of Departments</button>
+        </div>
+        
+        <img class = "background" src="images/Bids.png">
+        <div class = "right_side_square">
+            <!--Some Content-->
+            <form name="signup" id="signup" action="addNewUser.jsp" method="post" onSubmit="return checkform()" autocomplete="off">
+                <h1>Fill Information to Add a New User</h1>
+                <!--empty field error message-->
+                <input type="text" id="errorEmpty" name="errorEmpty" readonly value="There is an empty field!!!">
+                <!--Name Section-->
+                <div class="row">
+                    <span><b>Name: </b></span>
+                    <input type="text" id="completeName" name="completeName" placeholder="Enter your complete name" maxlength="30" required>
+                </div>
+                <!--Email Section-->
+                <div class="row">
+                    <span><b>Email: </b></span>
+                    <input type="email" id="userEmail" name="userEmail" placeholder="Enter your email" maxlength="45" required> 
+                </div>
+                <!--Error message-->
+                    <input type="text" id="errorEmail" name="errorEmail" readonly value="The email must have the @">
+                <!--Username Section-->
+                <div class="row">
+                    <span><b>Username: </b></span>
+                    <input type="text" id="userName" name="userName" placeholder="Enter an username" maxlength="20" required> 
+                </div>
+                <!--Error message-->
+                    <input type="text" id="errorUsername" name="errorUsername" readonly value="The username already exists. Use another one.">
+                <!--Password Section-->
+                <div class="row">
+                    <span><b>Password: </b></span>
+                    <input type="password" id="userPass" name="userPass" placeholder="Enter a password" required>
+                </div>
+                <!--Confirm Password Section-->
+                <div class="row">
+                    <span><b>Confirm Password: </b></span>
+                    <input type="password" id="userPassConfirm" name="userPassConfirm" placeholder="Reenter the password" required> 
+                </div>
+                <!--Error message-->
+                    <input type="text" id="errorPassword" name="errorPassword" readonly value="The passwords do not match!!!">
+                <!--Telephone Section-->
+                <div class="row">
+                    <span><b>Telephone: </b></span>
+                    <input type="tel" id="telephone" name="telephone" placeholder="Enter your telephone" pattern="([0-9]{3})-[0-9]{3}-[0-9]{4}" maxlength="15" required>
+                </div>
+                <!--Postal Address Section-->
+                <div class="row">
+                    <span><b>Postal Address: </b></span>
+                </div>
+                <textarea id="postalAddress" name="postalAddress" placeholder="Enter your Postal Address" maxlength="50" required></textarea>
+                <!--Buttons-->
+                <div class="buttons">
+                    <button id ="cancel" type="button" onclick="window.location.href='welcomeMenuAdmin.html';">Cancel</button>
+                    <button id ="submit" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

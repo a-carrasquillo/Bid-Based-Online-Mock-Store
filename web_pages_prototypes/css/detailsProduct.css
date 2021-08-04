@@ -1,0 +1,334 @@
+@import url(welcomeMenu.css);
+/*Central white box*/
+.central_box {
+    position: absolute;
+    top: 35%;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    background-color: white;
+    height: 50%;
+    width: 85%;
+    border-radius: 20px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+}
+
+/*Bid Section*/
+.bid_tag {
+    position: absolute;
+    border: 0;
+    cursor: default;
+    font-size: 1.3vw;
+    background-color: white;
+    margin-left: 30%;
+    margin-top: 5%;
+    font-family: "Times New Roman";
+}
+
+.bid_tag:focus {
+    outline: none;
+}
+
+.currency {
+    position: absolute;
+    width: 20%;
+    margin-top: 7%;
+    margin-left: 30%;
+    height: 10%;
+    display: flex;
+}
+
+.currencySign {
+    position: absolute;
+    font-size: 1.5vw;
+    padding: 0 5px 0 10px;
+    width: 10%;
+    color: #333;
+    border: 2px solid #333;
+    border-right: 0;
+    border-radius: 5px 0 0 5px;
+    background: white;
+    z-index: 100;
+    cursor: default;
+}
+
+#currency_field {
+    position: absolute;
+    font-size: 1.5vw;
+    padding: 0 10px 0 20px;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background: white;
+    width: 75%;
+    left: 4%;
+    border-left: 0;
+    font-family: "Times New Roman";
+}
+/*Button*/
+.makeBid, .makeBid:hover {
+    position: absolute;
+    margin-top: 6.7%;
+    margin-left: 47.5%;
+    font-size: 1.25vw;
+    z-index: 200;
+    background-color: green;
+    color: white;
+    height: 7.6%;
+    width: 10%;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;    
+    font-family: "Times New Roman"; 
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+}
+
+.makeBid:hover {
+    background-color: darkgreen;
+}
+
+.makeBid:active {
+    background-color: darkgreen;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}
+
+#currency_field:focus {
+    outline: none;
+}
+
+/*Go Back Button*/
+#goBack, #goBack:hover {
+    position: absolute;
+    left: 5%;
+    top: 18.5%;
+    font-size: 1.1vw;
+    z-index: 100;
+    background-color: white;
+    height: 6%;
+    width: 10%;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+}
+
+#goBack:hover {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+#goBack:active {
+    background-color: cornflowerblue;
+    color: white;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}
+
+/*Product Name Section*/
+.productName{
+    position: absolute;
+    border: 0;
+    cursor: default;
+    font-size: 1.6vw;
+    background-color: white;
+    margin-left: 2.5%;
+    margin-top: 2.5%;
+    font-family: "Times New Roman";
+    width: 55%;
+}
+
+.productName:focus, .bidInf:focus, .due_date:focus, .departmentsInf:focus, .description_tag:focus {
+    outline: none;
+}
+
+.state {
+    position: absolute;
+    border: 0;
+    cursor: default;
+    font-size: 1.5vw;
+    background-color: white;
+    margin-left: 2.5%;
+    margin-top: 4.6%;
+    font-family: "Times New Roman";
+    width: 26%;
+}
+
+.state:focus, .state:focus-within {
+    outline: none;
+}
+
+.bidInf {
+    position: absolute;
+    border: 0;
+    cursor: default;
+    font-size: 1.5vw;
+    background-color: white;
+    margin-left: 2.5%;
+    margin-top: 7%;
+    font-family: "Times New Roman";
+    width: 26%;
+}
+
+/*Due Date Section*/
+.due_date {
+    position: absolute;
+    border: 0;
+    cursor: default;
+    font-size: 1.5vw;
+    background-color: white;
+    margin-left: 2.5%;
+    margin-top: 10%;
+    font-family: "Times New Roman";
+    width: 26%;
+}
+
+/*Department Section*/
+.departmentsInf {
+    position: absolute;
+    border: 0;
+    cursor: default;
+    font-size: 1.5vw;
+    background-color: white;
+    margin-left: 2.5%;
+    margin-top: 13%;
+    font-family: "Times New Roman";
+    width: 55%;
+}
+
+/*Description Section*/
+.description_tag {
+    position: absolute;
+    border: 0;
+    cursor: default;
+    font-size: 1.5vw;
+    background-color: white;
+    margin-left: 2.5%;
+    margin-top: 16%;
+    font-family: "Times New Roman";
+}
+
+.description {
+    position: absolute;
+    border: 0;
+    cursor: default;
+    font-size: 1.2vw;
+    background-color: white;
+    margin-left: 2.5%;
+    margin-top: 18.5%;
+    font-family: "Times New Roman";
+    width: 55%;
+    text-align: justify;
+}
+
+/*Image Section*/
+.product img {
+    margin-left: 63%;
+    margin-top: 3%;
+    max-height: 90%;
+}
+/*Error Message*/
+#errorBid {
+    position: fixed;
+    color: red;
+    font-size: 0.8vw;
+    width: 20%;
+    text-align: center;
+    border-color: none;
+    border-width: 0px;
+    background-color: none;
+    font-weight: bold;
+    margin-left: 22%;
+    margin-top: 8%;
+}
+
+/*Edit and Make Inactive Buttons*/
+.editButton, .editButton:hover {
+    position: absolute;
+    margin-top: 7%;
+    margin-left: 30%;
+    width: 40px;
+    height: 35px;
+    font-size: 1.2vw;
+    background-color: lightgrey;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 6px #999;
+    z-index: 100;
+}
+
+.editButton:hover {
+    background-color: darkgrey;
+    color: white;
+}
+
+.editButton:active {
+    background-color: darkgrey;
+    color: white;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}
+
+.inactiveButton, .inactiveButton:hover {
+    position: absolute;
+    margin-top: 7%;
+    margin-left: 33%;
+    width: 40px;
+    height: 35px;
+    font-size: 1.2vw;
+    background-color: lightsalmon;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 6px #999;
+}
+
+.inactiveButton:hover {
+    background-color: indianred;
+    color: white;
+}
+
+.inactiveButton:active {
+    background-color: indianred;
+    color: white;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}
+
+#opTag {
+    position: absolute;
+    margin-top: 5%;
+    margin-left: 29.4%;
+    z-index: 100;
+    background-color: white;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+}
+
+#square {
+    position: absolute;
+    border-radius: 20px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid; 
+    width: 160px;
+    height: 70px;
+    margin-top: 5.7%;
+    margin-left: 27.7%;
+}

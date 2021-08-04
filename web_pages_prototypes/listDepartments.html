@@ -1,0 +1,402 @@
+<!doctype html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <link rel="stylesheet" type="text/css" href="css/listDepartments.css">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <title>Heaven of Bids Administration</title>
+        <!-- Load icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript">
+            function showMessage()
+            {
+                alert("The Department is already inactive!!!");
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <!--Small Bid Icon-->
+            <img class = "header_icon" src="images/BID.jpg"> 
+            <!--Left side clouds-->
+            <img class = "nube" id="nube1" src="images/nube.png">
+            <img class = "nube" id="nube2" src="images/nube.png">
+            <!--img class = "nube" id="nube3" src="images/nube.png"-->
+            <!--Central message-->
+            <h1>Welcome &lt;Admin&gt; to the Heaven of Bids</h1>
+            <!--Right side clouds-->
+            <!--img class = "nube" id="nube4" src="images/nube.png"-->
+            <img class = "nube" id="nube5" src="images/nube.png">
+            <img class = "nube" id="nube6" src="images/nube.png">
+            <img class = "nube" id="nube7" src="images/nube.png">
+            <img class = "nube" id="nube8" src="images/nube.png">
+        </div>
+        
+        <!--Log out button-->
+        <button id ="logout" type="button" onclick="window.location.href='login.html';">Sign out</button>
+        
+        <div class = "left_side_square">
+            <!--Central message of the left side square-->
+            <h1>Administrator Operations</h1> 
+            <!--Options that the Administrator can choose from-->    
+            <h2 class="optionClassTag">User Management:</h2> 
+                <button class="option" type="button" id="addUser" onclick="window.location.href='addUser.html';">Add User</button>
+                <button class="option" type="button" onclick="window.location.href='listUsers.html';">List Of User</button>
+            
+            <h2 class="optionClassTag">Product Management:</h2> 
+                <button class="option" type="button" onclick="window.location.href='sellProductAdmin.html';">Add Product</button>
+                <button class="option" type="button" onclick="window.location.href='listProducts.html';">List Of Products</button>
+            
+            <h2 class="optionClassTag">Department Management:</h2>
+                <button class="option" type="button" onclick="window.location.href='addDepartment.html';">Add Department</button>
+                <button class="option" type="button" id="active">List Of Departments</button>
+        </div>
+        <img class = "background" src="images/Bids.png">
+        <div class = "right_side_square">
+            <div class="filter">
+                <form id="search" action="departmentsFilter.jsp" method="post">
+                    <select name="search_filter" class="search_filter">
+                        <option value="">All Departments</option>
+                        <option value="Active">Active Departments</option>
+                        <option value="Inactive">Inactive Departments</option>
+                    </select>
+                    <button type="submit" class="filter_button"><i class="fa fa-filter" aria-hidden="true"></i></button>
+                </form>
+            </div>
+            <!--Error Message
+            <p id="error">No department found with the specified filter. Try another one...</p>-->
+            
+            <!--Departments Section-->
+            <table>
+                <tr>
+                    <td> department1012345678910</td>
+                    <td>
+                        <form action="modifyDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="editButton" title="Edit Department"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="inactiveButton" title="Make Department Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> department2</td>
+                    <td>
+                        <form action="modifyDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="editButton" title="Edit Department"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <button type="button" class="inactiveButton" title="Department Already Inactive" onclick="return showMessage();"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td> department#</td>
+                    <td>
+                        <form action="modifyDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="editButton" title="Edit Department"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="inactiveButton" title="Make Department Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> department#</td>
+                    <td>
+                        <form action="modifyDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="editButton" title="Edit Department"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="inactiveButton" title="Make Department Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> department#</td>
+                    <td>
+                        <form action="modifyDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="editButton" title="Edit Department"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="inactiveButton" title="Make Department Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> department#</td>
+                    <td>
+                        <form action="modifyDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="editButton" title="Edit Department"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="inactiveButton" title="Make Department Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> department#</td>
+                    <td>
+                        <form action="modifyDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="editButton" title="Edit Department"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="inactiveButton" title="Make Department Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> department#</td>
+                    <td>
+                        <form action="modifyDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="editButton" title="Edit Department"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="inactiveButton" title="Make Department Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr> 
+                <tr>
+                    <td> department#</td>
+                    <td>
+                        <form action="modifyDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="editButton" title="Edit Department"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="inactiveButton" title="Make Department Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> department#</td>
+                    <td>
+                        <form action="modifyDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="editButton" title="Edit Department"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="inactiveButton" title="Make Department Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> department#</td>
+                    <td>
+                        <form action="modifyDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="editButton" title="Edit Department"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="inactiveButton" title="Make Department Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> department#</td>
+                    <td>
+                        <form action="modifyDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="editButton" title="Edit Department"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="inactiveButton" title="Make Department Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> department#</td>
+                    <td>
+                        <form action="modifyDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="editButton" title="Edit Department"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="inactiveButton" title="Make Department Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> department#</td>
+                    <td>
+                        <form action="modifyDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="editButton" title="Edit Department"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="inactiveButton" title="Make Department Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> department#</td>
+                    <td>
+                        <form action="modifyDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="editButton" title="Edit Department"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="inactiveButton" title="Make Department Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> department#</td>
+                    <td>
+                        <form action="modifyDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="editButton" title="Edit Department"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="inactiveButton" title="Make Department Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> department#</td>
+                    <td>
+                        <form action="modifyDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="editButton" title="Edit Department"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="inactiveButton" title="Make Department Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> department#</td>
+                    <td>
+                        <form action="modifyDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="editButton" title="Edit Department"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="inactiveButton" title="Make Department Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> department#</td>
+                    <td>
+                        <form action="modifyDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="editButton" title="Edit Department"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="inactiveButton" title="Make Department Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> department#</td>
+                    <td>
+                        <form action="modifyDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="editButton" title="Edit Department"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="inactiveButton" title="Make Department Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> department#</td>
+                    <td>
+                        <form action="modifyDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="editButton" title="Edit Department"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="inactiveButton" title="Make Department Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> department#</td>
+                    <td>
+                        <form action="modifyDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="editButton" title="Edit Department"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeDepartment.jsp" method="post">
+                            <input type="hidden" name="departmentName" value="<%=departmentName%>">
+                            <button type="submit" class="inactiveButton" title="Make Department Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

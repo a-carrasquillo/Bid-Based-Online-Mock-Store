@@ -1,0 +1,56 @@
+<!doctype html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <title>Heaven of Bids</title>
+        <link rel="stylesheet" type="text/css" href="css/detailsProduct.css">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <!-- Load icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="header">
+            <!--Small Bid Icon-->
+            <img class = "header_icon" src="images/BID.jpg"> 
+            <!--Left side clouds-->
+            <img class = "nube" id="nube1" src="images/nube.png">
+            <img class = "nube" id="nube2" src="images/nube.png">
+            <!--Central message-->
+            <h1>Welcome &lt;name&gt; to the Heaven of Bids</h1>
+            <!--Right side clouds-->
+            <img class = "nube" id="nube5" src="images/nube.png">
+            <img class = "nube" id="nube6" src="images/nube.png">
+            <img class = "nube" id="nube7" src="images/nube.png">
+            <img class = "nube" id="nube8" src="images/nube.png">
+        </div>
+        
+        <!--Go Back Section-->
+        <button id ="goBack" type="button" onclick="window.location.href='listProducts.html';">Go Back to List of Product</button>
+        <!--Log out button-->
+        <button class ="logout" type="button" onclick="window.location.href='login.html';">Sign out</button>
+        
+        <!--Central Box-->
+        <div class="central_box">
+            <form class="product" action="modifyProduct.jsp" method="post">
+                <input type="hidden" class="ID" name="ID" value="#">
+                <input type="text" class="productName" name="productName" readonly value="Product Name">
+                <input type="text" class="state" name="state" readonly value="State: Active">
+                <input type="text" class="bidInf" name="bid" readonly value="Highest Bid: $##.##" >
+                <input type="text" class="due_date" name="due_date" readonly value="Due Date: ##/##/#####">
+                <input type="text" class="departmentsInf" name="departments" readonly value="Department: Computer">
+                <input type="text" class="description_tag" name="description_tag" readonly value="Description:">
+                <p class="description">I really like that hat, Marty. Thanks, Biff. (Jennifer's House) (Marty pulls up outside of Jennifer's house. Jennifer is still sleeping on the swing on the porch.) Jennifer. Jen. Jennifer. Wake up.</p>
+                
+                <button type="submit" class="editButton" title="Edit Product"><i class="fa fa-pencil"></i></button>
+                <img src="images/bidMan.png">
+            </form>
+            <h3 id="opTag">Operations</h3>
+            <div id="square"><!--Square--></div>
+            <form action="removeDepartment.jsp" method="post">
+                <input type="hidden" name="ID" value="<%=ID%>">
+                <button type="submit" class="inactiveButton" title="Make Product Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+            </form>
+        </div>
+    </body>
+</html>

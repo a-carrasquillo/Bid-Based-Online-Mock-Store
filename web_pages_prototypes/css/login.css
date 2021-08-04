@@ -1,0 +1,161 @@
+* {margin: 0; padding: 0;}
+
+body {font-family: "Times New Roman", Times, arial, serif, sans-serif;}
+
+.header {
+    z-index:100;
+    background-color:rgb(176, 221, 226);
+    width:100%;
+    height:15%; 
+    position:absolute;
+    top:0%;
+    text-align: center;
+    font-size: 25px;
+}
+
+.header h1 {
+    position: relative;
+    top: 28%;
+    z-index: 100;
+}
+
+.nube {
+    position: absolute;
+    height: 30%;
+    top: 35%;
+}
+
+#nube1 { left: 3%; }
+
+#nube2 { left: 9%; }
+
+#nube3 { left: 15%; }
+
+#nube4 { left: 21%; }
+
+#nube5 { left: 27%; }
+
+#nube6 { right: 27%; }
+
+#nube7 { right: 21%; }
+
+#nube8 { right: 15%; }
+
+#nube9 { right: 9%; }
+
+#nube10 { right: 3%; }
+
+.background img{
+    position: absolute;
+    top:15%;
+    height: 85%;
+    width: 100%;
+}
+
+.main_body {
+    position:absolute;
+    top: 39%;
+    right: 5%;
+    background-color: white;
+    min-height: 30%;
+    width: 19%;
+    border-radius: 20px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+}
+
+.main_body .top_tag {
+    position: relative;
+    text-align: center;
+    padding-top: 5%;
+    cursor: default;
+}
+
+.main_body .tag {
+    position: relative;
+    font-size: 130%;
+    left: 7%;
+    padding-top: 2.5%;
+    cursor: default;
+}
+
+.main_body #userName, #userPass  {
+    position: relative;
+    left: 7%;
+    margin-top: 2.5%;
+    height: 9%;
+    width: 86%;
+    border: 1.5px solid #555;
+    border-radius: 10px;
+    font-size: 1.15vw;
+    text-align: center;
+    font-family: "Times New Roman", Times, arial, serif, sans-serif;
+}
+
+.main_body #userName:focus-within, #userPass:focus-within  {
+    outline: none;
+}
+
+.main_body #loginButton, #loginButton:hover {
+    position: relative;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    left: 30%;
+    font-size: 1.1vw;
+    background-color: green;
+    color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 40%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+}
+
+#errorUserNamePass {
+    position: relative;
+    display: block;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    color: red;
+    font-size: 0.8vw;
+    text-align: center;
+    border-color: none;
+    border-width: 0px;
+    background-color: none;
+    font-weight: bold;
+    z-index: 200;
+}
+
+.main_body #loginButton:hover {
+    background-color: darkgreen;
+}
+
+.main_body #loginButton:active {
+    background-color: darkgreen;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}
+
+#signUp, #signUp:hover {
+    position: relative;
+    display: block;
+    margin-bottom: 3.5%;
+    left: 9%;
+    color: dimgray;
+    font-size: 0.8vw;
+}
+
+#signUp:hover {
+    color: blue;
+}

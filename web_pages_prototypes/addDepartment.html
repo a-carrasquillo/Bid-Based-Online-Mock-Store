@@ -1,0 +1,69 @@
+<!doctype html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <title>Heaven of Bids Administration</title>
+        <link rel="stylesheet" type="text/css" href="css/addDepartment.css">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    </head>
+    <body>
+        <div class="header">
+            <!--Small Bid Icon-->
+            <img class = "header_icon" src="images/BID.jpg"> 
+            <!--Left side clouds-->
+            <img class = "nube" id="nube1" src="images/nube.png">
+            <img class = "nube" id="nube2" src="images/nube.png">
+            <!--img class = "nube" id="nube3" src="images/nube.png"-->
+            <!--Central message-->
+            <h1>Welcome &lt;Admin&gt; to the Heaven of Bids</h1>
+            <!--Right side clouds-->
+            <!--img class = "nube" id="nube4" src="images/nube.png"-->
+            <img class = "nube" id="nube5" src="images/nube.png">
+            <img class = "nube" id="nube6" src="images/nube.png">
+            <img class = "nube" id="nube7" src="images/nube.png">
+            <img class = "nube" id="nube8" src="images/nube.png">
+        </div>
+        
+        <!--Log out button-->
+        <button id ="logout" type="button" onclick="window.location.href='login.html';">Sign out</button>
+        
+        <div class = "left_side_square">
+            <!--Central message of the left side square-->
+            <h1>Administrator Operations</h1> 
+            <!--Options that the Administrator can choose from-->    
+            <h2 class="optionClassTag">User Management:</h2> 
+                <button class="option" type="button"  onclick="window.location.href='addUser.html';">Add User</button>
+                <button class="option" type="button" onclick="window.location.href='listUsers.html';">List Of User</button>
+            
+            <h2 class="optionClassTag">Product Management:</h2> 
+                <button class="option" type="button" onclick="window.location.href='sellProductAdmin.html';">Add Product</button>
+                <button class="option" type="button" onclick="window.location.href='listProducts.html';">List Of Products</button>
+            
+            <h2 class="optionClassTag">Department Management:</h2>
+                <button class="option" type="button" id="active">Add Department</button>
+                <button class="option" type="button" onclick="window.location.href='listDepartments.html';">List Of Departments</button>
+        </div>
+        
+        <img class = "background" src="images/Bids.png">
+        <div class = "right_side_square">
+            <form id="addDepartment" action="addNewDepartment.jsp" method="post">
+                <!--Central message of the right side square-->
+                <h1>Adding a Department</h1> 
+                <!--Error Message
+                <p id="errorDept"> The Department Already Exists... Go to List Of Departments using Inactive Filter and Search for it and by Editing you can make it available again.</p>-->
+                <!--Name Section-->
+                <div class="row">
+                    <span><b>Department Name: </b></span>
+                    <input type="text" id="departmentName" name="departmentName" placeholder="Enter the new department name" maxlength="40" required>
+                </div>
+                <!--Buttons-->
+                <div class="buttons">
+                    <button id ="cancel" type="button" onclick="window.location.href='welcomeMenuAdmin.html';">Cancel</button>
+                    <button id ="submit" type="submit">Add</button>
+                </div>
+            </form>
+            
+        </div>
+    </body>
+</html>

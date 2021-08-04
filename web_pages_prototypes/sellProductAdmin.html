@@ -1,0 +1,153 @@
+<!doctype html> 
+<html>
+    <head>
+        <meta charset="utf-8">        
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <link rel="stylesheet" type="text/css" href="css/sellProduct.css">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <title>Heaven of Bids Administration</title>
+    </head>
+    <body>
+        <div class="header">
+            <!--Small Bid Icon-->
+            <img class = "header_icon" src="images/BID.jpg"> 
+            <!--Left side clouds-->
+            <img class = "nube" id="nube1" src="images/nube.png">
+            <img class = "nube" id="nube2" src="images/nube.png">
+            <!--img class = "nube" id="nube3" src="images/nube.png"-->
+            <!--Central message-->
+            <h1>Welcome &lt;Admin&gt; to the Heaven of Bids</h1>
+            <!--Right side clouds-->
+            <!--img class = "nube" id="nube4" src="images/nube.png"-->
+            <img class = "nube" id="nube5" src="images/nube.png">
+            <img class = "nube" id="nube6" src="images/nube.png">
+            <img class = "nube" id="nube7" src="images/nube.png">
+            <img class = "nube" id="nube8" src="images/nube.png">
+        </div>
+        
+        <!--Log out button-->
+        <button class ="logout" id="admin" type="button" onclick="window.location.href='login.html';">Sign out</button>
+        
+        <div class = "left_side_square">
+            <!--Central message of the left side square-->
+            <h1>Administrator Operations</h1> 
+            <!--Options that the Administrator can choose from-->    
+            <h2 class="optionClassTag">User Management:</h2> 
+                <button class="option" type="button"  onclick="window.location.href='addUser.html';">Add User</button>
+                <button class="option" type="button" onclick="window.location.href='listUsers.html';">List Of User</button>
+            
+            <h2 class="optionClassTag">Product Management:</h2> 
+                <button class="option" type="button" id="active">Add Product</button>
+                <button class="option" type="button" onclick="window.location.href='listProducts.html';">List Of Products</button>
+            
+            <h2 class="optionClassTag">Department Management:</h2>
+                <button class="option" type="button" onclick="window.location.href='addDepartment.html';">Add Department</button>
+                <button class="option" type="button" onclick="window.location.href='listDepartments.html';">List Of Departments</button>
+        </div>
+        
+        <img class = "background" id="admin" src="images/Bids.png">
+        
+        <div class = "right_side_square">
+            <h1 id="fillInfoTag">Fill the information to sell a product</h1>
+            <form action="addProduct.jsp" method="post" autocomplete="off" enctype="multipart/form-data">
+                <input type="text" id="errorEmpty" name="errorEmpty" readonly value="Rename your picture since its name already exists in the system.">
+                <!--Product Name Section-->
+                <div class="row">
+                    <span><b>Product Name: </b></span>
+                    <input type="text" class="productName" id="admin" name="productName" placeholder="Enter the product name" maxlength="40" required>
+                </div>
+                <!--Initial Bid Section-->
+                <div class="row" id="initialBid">
+                    <span><b>Initial Bid: </b></span>
+                    <div class="currency" id="admin">
+                        <span class="currencySign" id="admin">$</span>
+                        <input type="text" name="bidInit" class="currency_field" id="admin" pattern="(\d{1-13}.\d{0-2})?$" value="" placeholder="1000.00" maxlength="16" min="0.00">
+                    </div>
+                </div>
+                <!--Picture Section-->
+                <div class="row">
+                    <span><b>Picture: </b></span>
+                    <input type="file" accept="image/*" class="productImage" id="admin" name="productImage" size="50" required>
+                </div>
+                <!--Due Date Section-->
+                <div class="row">
+                    <span><b>Due Date: </b></span>
+                    <input type="date" class="dueDate" id="admin" name="dueDate" required>
+                </div>
+                <!--Description Section-->
+                <div class="row">
+                    <span id="descTag"><b>Description: </b></span>
+                    <textarea class="description" id="admin" name="description" placeholder="Enter the product description" required rows="4"></textarea> 
+                </div> 
+                <!--Departments Section-->
+                <div class="row">
+                    <span><b>Department/s that belongs: </b></span>
+                    <div class="checkboxes" id="admin">
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" name="department" id="Garden" value="Garden"><label for="Garden" > Garden</label></td>
+                                <td><input type="checkbox" name="department" id="Videogames" value="Videogames"><label for="Videogames"> Videogames</label></td>
+                                <td><input type="checkbox" name="department" id="Computers" value="Computers"><label for="Computers"> Computers</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="department" id="Cars" value="Cars"><label for="Cars"> Cars</label></td>
+                                <td><input type="checkbox" name="department" id="Electronics" value="Electronics"><label for="Electronics"> Electronics</label></td>
+                                <td><input type="checkbox" name="department" id="Wood" value="Wood"><label for="Wood"> Wood</label></td>
+                            </tr>
+                            <!--<tr>
+                                <td><input type="checkbox" name="department" id="Cars" value="Cars"><label for="Cars"> Cars</label></td>
+                                <td><input type="checkbox" name="department" id="Electronics" value="Electronics"><label for="Electronics"> Electronics</label></td>
+                                <td><input type="checkbox" name="department" id="Wood" value="Wood"><label for="Wood"> Wood</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="department" id="Cars" value="Cars"><label for="Cars"> Cars</label></td>
+                                <td><input type="checkbox" name="department" id="Electronics" value="Electronics"><label for="Electronics"> Electronics</label></td>
+                                <td><input type="checkbox" name="department" id="Wood" value="Wood"><label for="Wood"> Wood</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="department" id="Cars" value="Cars"><label for="Cars"> Cars</label></td>
+                                <td><input type="checkbox" name="department" id="Electronics" value="Electronics"><label for="Electronics"> Electronics</label></td>
+                                <td><input type="checkbox" name="department" id="Wood" value="Wood"><label for="Wood"> Wood</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="department" id="Cars" value="Cars"><label for="Cars"> Cars</label></td>
+                                <td><input type="checkbox" name="department" id="Electronics" value="Electronics"><label for="Electronics"> Electronics</label></td>
+                                <td><input type="checkbox" name="department" id="Wood" value="Wood"><label for="Wood"> Wood</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="department" id="Cars" value="Cars"><label for="Cars"> Cars</label></td>
+                                <td><input type="checkbox" name="department" id="Electronics" value="Electronics"><label for="Electronics"> Electronics</label></td>
+                                <td><input type="checkbox" name="department" id="Wood" value="Wood"><label for="Wood"> Wood</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="department" id="Cars" value="Cars"><label for="Cars"> Cars</label></td>
+                                <td><input type="checkbox" name="department" id="Electronics" value="Electronics"><label for="Electronics"> Electronics</label></td>
+                                <td><input type="checkbox" name="department" id="Wood" value="Wood"><label for="Wood"> Wood</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="department" id="Cars" value="Cars"><label for="Cars"> Cars</label></td>
+                                <td><input type="checkbox" name="department" id="Electronics" value="Electronics"><label for="Electronics"> Electronics</label></td>
+                                <td><input type="checkbox" name="department" id="Wood" value="Wood"><label for="Wood"> Wood</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="department" id="Cars" value="Cars"><label for="Cars"> Cars</label></td>
+                                <td><input type="checkbox" name="department" id="Electronics" value="Electronics"><label for="Electronics"> Electronics</label></td>
+                                <td><input type="checkbox" name="department" id="Wood" value="Wood"><label for="Wood"> Wood</label></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="department" id="Cars" value="Cars"><label for="Cars"> Cars</label></td>
+                                <td><input type="checkbox" name="department" id="Electronics" value="Electronics"><label for="Electronics"> Electronics</label></td>
+                                <td><input type="checkbox" name="department" id="Wood" value="Wood"><label for="Wood"> Wood</label></td>
+                            </tr>-->
+                        </table>  
+                    </div>
+                </div> 
+                <!--Buttons-->
+                <div class="buttons">
+                    <button id ="cancel" type="button" onclick="window.location.href='#';">Cancel</button>
+                    <button id ="submit" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

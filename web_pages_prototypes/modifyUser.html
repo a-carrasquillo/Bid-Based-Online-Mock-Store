@@ -1,0 +1,138 @@
+<!doctype html> 
+<html>
+    <head>
+        <meta charset="utf-8">        
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <title>Heaven of Bids Administration</title>
+        <link rel="stylesheet" type="text/css" href="css/modifyUser.css">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+         <!--Script to validate the email and the password with confirm password-->
+        <script>
+            function checkform() {
+                "use strict";
+                //Retrieving the value in the email box
+                var emailVal = document.signup.userEmail.value;
+                //Check if the email does not have the @
+                if(!emailVal.includes("@")) {
+                    //Show the error
+                    document.getElementById("errorEmail").value = "Emails must contain @";
+                    //Make the cursor go to the email box
+                    document.signup.userEmail.focus();
+                } else {
+                    //There is no error in the email, hence, we empty the error message
+                    document.getElementById("errorEmail").value = "";
+                }
+                //Retrieving the password and the confirmation of the password
+                var pass = document.signup.userPass.value;
+                var passConf = document.signup.userPassConfirm.value;
+                //Verify if the password is not the same as the confirmation password
+                if(pass!==passConf) {
+                    //Show the error message
+                    document.getElementById("errorPassword").value = "Passwords don't match!";
+                    //if there is no problem with the email, move the cursor to the confirm password box
+                    if(emailVal.includes("@")){
+                        document.signup.userPassConfirm.focus();
+                    }
+                } else {
+                    //if the passwords are the same, empty the error message
+                    document.getElementById("errorPassword").value = "";
+                }
+                //if there is any kind of problem return false, else, true. 
+                if(!emailVal.includes("@") || pass!=passConf){
+                   return false;
+                } else {
+                    return true;   
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <!--Small Bid Icon-->
+            <img class = "header_icon" src="images/BID.jpg"> 
+            <!--Left side clouds-->
+            <img class = "nube" id="nube1" src="images/nube.png">
+            <img class = "nube" id="nube2" src="images/nube.png">
+            <!--img class = "nube" id="nube3" src="images/nube.png"-->
+            <!--Central message-->
+            <h1>Welcome &lt;Admin&gt; to the Heaven of Bids</h1>
+            <!--Right side clouds-->
+            <!--img class = "nube" id="nube4" src="images/nube.png"-->
+            <img class = "nube" id="nube5" src="images/nube.png">
+            <img class = "nube" id="nube6" src="images/nube.png">
+            <img class = "nube" id="nube7" src="images/nube.png">
+            <img class = "nube" id="nube8" src="images/nube.png">
+        </div>
+        
+        <!--Log out button-->
+        <button id ="logout" type="button" onclick="window.location.href='login.html';">Sign out</button>
+        
+        <div class="left_side">
+            <img class = "background" id="left_side" src="images/Bids_part1.png">
+        </div>
+        <div class = "center_square">
+            <!--Some Content-->
+            <form action="modifyUserInfo.jsp" method="post" autocomplete="off">
+                <h1>Editing User Information</h1>
+                <!--
+                <p id="error">error info</p>-->
+                <!--Username Section-->
+                <div class="row" id="top">
+                    <span><b>Username: </b></span>
+                    <input type="text" id="userName" name="newUserName" maxlength="20" required readonly value="username1">
+                </div>
+                <!--Name Section-->
+                <div class="row">
+                    <span><b>Name: </b></span>
+                    <input type="text" id="completeName" name="completeName" placeholder="User McUserito" maxlength="30" required>
+                </div>
+                <!--Email Section-->
+                <div class="row">
+                    <span><b>Email: </b></span>
+                    <input type="email" id="userEmail" name="userEmail" placeholder="user1@email.com" maxlength="45" required>
+                </div>
+                <!--Error message
+                    <input type="text" id="errorEmail" name="errorEmail" readonly value="The email must have the @">-->
+                
+                <!--Password Section-->
+                <!--Aclaratory Message-->
+                <p id="passMessage"><b>Note: Only fill the passwords fields if you want to change the user current password, else, let it blank.</b></p>
+                <div class="row">
+                    <span><b>Password: </b></span>
+                    <input type="password" id="userPass" name="userPass" placeholder="Enter your password" >
+                </div>
+                <!--Confirm Password Section-->
+                <div class="row">
+                    <span><b>Confirm Password: </b></span>
+                    <input type="password" id="userPassConfirm" name="userPassConfirm" placeholder="Reenter your password" >
+                </div>
+                <!--Error message
+                    <input type="text" id="errorPassword" name="errorPassword" readonly value="The passwords do not match!!!">-->
+                <!--Telephone Section-->
+                <div class="row">
+                    <span><b>Telephone: </b></span>
+                    <input type="tel" id="telephone" name="telephone" placeholder="(787)-111-1111" pattern="([0-9]{3})-[0-9]{3}-[0-9]{4}" maxlength="15" required>
+                </div>
+                <!--Postal Address Section-->
+                <div class="row">
+                    <span><b>Postal Address: </b></span>
+                </div>
+                <textarea id="postalAddress" name="postalAddress" placeholder="P.O. Userbox2020" maxlength="50" required></textarea>
+                
+                <!--Checkbox for activating a department-->
+                <div class="row">
+                    <input type="checkbox" id="activeDepartment" name="activate" value="activeDepartment"><span><label for="activeDepartment"> Activate Department</label></span> 
+                </div>
+                
+                <!--Buttons-->
+                <div class="buttons">
+                    <button id ="cancel" type="button" onclick="window.location.href='listUsers.jsp';">Cancel Changes</button>
+                    <button id ="submit" type="submit">Save Changes</button>
+                </div>
+            </form>
+        </div>
+        <div class="right_side">
+            <img class = "background" id="right_side" src="images/Bids_part2.png">
+        </div>
+    </body>
+</html>

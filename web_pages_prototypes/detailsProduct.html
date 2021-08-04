@@ -1,0 +1,71 @@
+<!doctype html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <title>Heaven of Bids</title>
+        <link rel="stylesheet" type="text/css" href="css/detailsProduct.css">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <!-- Load icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="header">
+            <!--Small Bid Icon-->
+            <img class = "header_icon" src="images/BID.jpg"> 
+            <!--Left side clouds-->
+            <img class = "nube" id="nube1" src="images/nube.png">
+            <img class = "nube" id="nube2" src="images/nube.png">
+            <!--Central message-->
+            <h1>Welcome &lt;name&gt; to the Heaven of Bids</h1>
+            <!--Right side clouds-->
+            <img class = "nube" id="nube5" src="images/nube.png">
+            <img class = "nube" id="nube6" src="images/nube.png">
+            <img class = "nube" id="nube7" src="images/nube.png">
+            <img class = "nube" id="nube8" src="images/nube.png">
+        </div>
+        <!--Go Back Section-->
+        <button id ="goBack" type="button" onclick="window.location.href='welcomeMenu.jsp';">Go Back to Keep Searching</button>
+        <!--Log out button-->
+        <button class ="logout" type="button" onclick="window.location.href='login.html';">Sign out</button>
+        <!--Search Bar section-->
+        <div class="search_bar">
+            <form id="search" action="search.jsp" method="post">
+                <input type="text" placeholder="Search a product..." name="search" class="search">
+                <select name="search_filter" class="search_filter">
+                    <option value="">All Departments</option>
+                    <option value="Books">Books</option>
+                    <option value="Toys&Games">Toys&amp;Games</option>
+                    <option value="Videogames">Videogames</option>
+                </select>
+                <button type="submit" class="search_button"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        
+        <!--Central Box-->
+        <div class="central_box">
+            <form class="product" action="makeBid.jsp" method="post">
+                <input type="hidden" class="ID" name="ID" value="#">
+                <input type="text" class="productName" name="productName" readonly value="Product Name">
+                <input type="text" class="bidInf" name="bid" readonly value="Highest Bid: $##.##" >
+                <input type="text" class="due_date" name="due_date" readonly value="Due Date: ##/##/#####">
+                <input type="text" class="departmentsInf" name="departments" readonly value="Department: Computer">
+                <input type="text" class="description_tag" name="description_tag" readonly value="Description:">
+                <p class="description">I really like that hat, Marty. Thanks, Biff. (Jennifer's House) (Marty pulls up outside of Jennifer's house. Jennifer is still sleeping on the swing on the porch.) Jennifer. Jen. Jennifer. Wake up.</p>
+                <input type="text" class="bid_tag" name="bid_tag" readonly value="Enter your bid:">
+                <div class="currency">
+                    <span class="currencySign">$</span>
+                    <!--based on https://codepen.io/559wade/pen/LRzEjj-->
+                    <input type="text" name="currency_field" id="currency_field" pattern="^\d{1,3}(,\d{3})*(\.\d{2})?$" value="" placeholder="1,000.00" min="1.00">
+                    <!------------------------------------------------------------------------------>
+                </div>
+                <button type="submit" class="makeBid">Make Bid</button>
+                <span id="errorBid">Bid Not Allow</span>
+                <img src="images/bidMan.png">
+            </form>
+            
+        </div>
+        
+        
+    </body>
+</html>

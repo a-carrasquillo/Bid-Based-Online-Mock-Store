@@ -1,0 +1,385 @@
+* { margin: 0; padding: 0; }
+
+body { 
+    font-family: "Times New Roman", Times, arial, serif, sans-serif; 
+    background-color: rgb(59, 191, 151);   
+}
+
+.header {
+    z-index: 200;
+    background-color:rgb(176, 221, 226);
+    width:100%;
+    height: 15%; 
+    position: fixed;
+    text-align: center;
+    /*Modified*/
+    font-size: 1.3vw;
+    cursor: default;
+}
+
+.header_icon {
+    position: absolute;
+    height: 80%;
+    top: 10%;
+    left: 2%;
+    border-radius: 20px;
+}
+
+.header h1 {
+    position: relative;
+    top: 28%;
+}
+
+.nube {
+    position: absolute;
+    height: 30%;
+    top: 35%;
+}
+
+#nube1 { left: 11%; }
+
+#nube2 { left: 16%; }
+
+#nube5 { right: 16%; }
+
+#nube6 { right: 11%; }
+
+#nube7 { right: 6%; }
+
+#nube8 { right: 1%; }
+
+.background {
+    position: fixed;
+    width: 70%;
+    height: 100%;
+    right: 0%;
+}
+
+.right_side_square {
+    top: 20%;
+    left: 47%;
+    width: 33%;
+    min-height: 60%;
+    margin-bottom: 2%;
+    z-index: 100;
+    position: absolute;
+    text-align: left;
+    background-color: white;
+    border-radius: 20px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+}
+
+h1#fillInfoTag {
+    position: relative;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+#errorEmpty {
+    position: relative;
+    color: red;
+    font-size: 0.8vw;
+    width: 90%;
+    text-align: center;
+    border-color: none;
+    border-width: 0px;
+    background-color: none;
+    top: 4.9%;
+    margin-left: 3%;
+    font-weight: bold;
+    z-index: 100;
+    background-color: transparent;
+}
+
+.row {
+    margin-top: 2.5%;
+    margin-left: 6%;
+    font-size: 1.1vw;
+}
+
+.productName#admin {
+    position: relative;
+    border: 1.5px solid #555;
+    width: 70%;
+    margin-left: 0%;
+    font-size: 1.25vw;
+    text-align: center;
+    font-family: "Times New Roman", Times, arial, serif, sans-serif;
+    border-radius: 5px;
+    padding-bottom: 0.5%;
+    padding-top: 0.5%;
+}
+
+/*Bid Section*/
+.currency#admin {
+    position: absolute;
+    width: 75%;
+    margin-left: 2%;
+    height: 10%;
+    display: inline-flex;
+}
+
+.currencySign#admin {
+    position: absolute;
+    font-size: 1.5vw;
+    padding: 0 5px 0 20px;
+    color: #333;
+    border: 2px solid #333;
+    border-right: 0;
+    border-radius: 5px 0 0 5px;
+    background: white;
+    cursor: default;
+    left: 7.5%;
+}
+
+.currency_field#admin {
+    position: absolute;
+    font-size: 1.5vw;
+    padding: 0 10px 0 20px;
+    color: #333;
+    border: 2px solid #333;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background: white;
+    width: 78%;
+    left: 16%;
+    border-left: 0;
+    font-family: "Times New Roman";
+}
+
+.currency_field:focus {
+    outline: none;
+}
+
+/*Picture Section*/
+.productImage#admin {
+    position: relative;
+    height: 100%;
+    width: 70%;
+    margin-left: 13.4%;
+    font-size: 1vw;
+    text-align: center;
+    font-family: "Times New Roman", Times, arial, serif, sans-serif;
+    border-radius: 5px;
+    padding-top: 1.5%;
+    left: -2%;
+}
+
+/*Due Date Section*/
+.dueDate#admin {
+    position: relative;
+    height: 100%;
+    border: 1.5px solid #555;
+    width: 70%;
+    margin-left: 8%;
+    font-size: 1.25vw;
+    text-align: center;
+    font-family: "Times New Roman", Times, arial, serif, sans-serif;
+    border-radius: 5px;
+    padding-bottom: 0.5%;
+    padding-top: 0.5%;
+}
+
+/*Description Section*/
+#descTag {
+    position: absolute;
+}
+
+.description#admin {
+    position: relative;
+    border: 1.5px solid #555;
+    border-radius: 5px;
+    font-size: 1.25vw;
+    text-align: justify;
+    font-family: "Times New Roman", Times, arial, serif, sans-serif;
+    width: 68%;
+    left: 24.5%;
+    padding: 1%;
+}
+
+/*Initial Bid Section*/
+#initialBid{
+    position: relative;
+}
+
+/*Departments Section*/
+.checkboxes#admin {
+    position: relative;
+    width: 95%;
+    /*border: 1.5px solid #555;*/
+}
+
+td {
+    border: 4px solid transparent;
+}
+
+/*Cancel and Submit Buttons*/
+.buttons {
+    position: relative;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    width: 100%;
+}
+
+#cancel, #cancel:hover {
+    position: relative;
+    left: 8%;
+    padding-bottom: 0.5%;
+    padding-top: 0.5%;
+    font-size: 1.25vw;
+    background-color: red;
+    color: white;
+    height: 100%;
+    width:calc(40% - 40px);
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+}
+
+#submit, #submit:hover {
+    position: relative;
+    left: 25%;
+    padding-bottom: 0.5%;
+    padding-top: 0.5%;
+    font-size: 1.25vw;
+    background-color: green;
+    color: white;    
+    height: 100%;
+    width:calc(40% - 40px);
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+}
+
+#submit:hover {
+    background-color: darkgreen;
+}
+
+#cancel:hover {
+    background-color: darkred;
+}
+
+#submit:active {
+    background-color: darkgreen;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}
+
+#cancel:active {
+    background-color: darkred;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}
+
+/*Admin Menu*/
+.left_side_square {
+    position: fixed;
+    top: 16%;
+    margin-left: 0.5%;
+    width: 30%;
+    height: 83%;
+    z-index: 200;
+    background-color: white;
+    border-radius: 20px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    -moz-box-shadow:    inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+    overflow: auto;
+}
+
+.left_side_square h1 {
+    text-align: center;
+    margin-top: 3%;
+    cursor: default;
+}
+
+.left_side_square h2 {
+    text-align:left;
+}
+
+h2.optionClassTag {
+    position: relative;
+    margin-top: 5%;
+    margin-left: 10%;
+    cursor: default;
+}
+
+button.option{
+    position: relative;
+    display: block;
+    margin-left: 10%;
+    padding-left: 5%;
+    margin-top: 2%;
+    font-family: "Times New Roman";
+    font-size: 1.1vw;
+    width: 80%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: left;
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button.option:focus-within{
+    outline: none;
+}
+
+button.option:hover, button.option#active {
+    background-color:darkseagreen;
+    text-decoration: underline;
+    outline: none;
+}
+
+button.option#active {
+    cursor: default;
+    background-color: green;
+}
+
+/*Logout*/
+.logout#admin, .logout#admin:hover {
+    position: fixed;
+    right: 2%;
+    top: 18%;
+    font-size: 1.2vw;
+    background-color: white;
+    height: 5%;
+    width: 6%;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman";
+    text-align: center;
+    outline: none;
+    box-shadow: 0 9px #999;
+}
+
+.logout#admin:hover {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.logout#admin:active {
+    background-color: cornflowerblue;
+    color: white;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+}

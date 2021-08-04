@@ -1,0 +1,355 @@
+<!doctype html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="a-carrasquillo, arivesan">
+        <link rel="stylesheet" type="text/css" href="css/listUsers.css">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <!-- Load icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="header">
+            <!--Small Bid Icon-->
+            <img class = "header_icon" src="images/BID.jpg"> 
+            <!--Left side clouds-->
+            <img class = "nube" id="nube1" src="images/nube.png">
+            <img class = "nube" id="nube2" src="images/nube.png">
+            <!--img class = "nube" id="nube3" src="images/nube.png"-->
+            <!--Central message-->
+            <h1>Welcome &lt;Admin&gt; to the Heaven of Bids</h1>
+            <!--Right side clouds-->
+            <!--img class = "nube" id="nube4" src="images/nube.png"-->
+            <img class = "nube" id="nube5" src="images/nube.png">
+            <img class = "nube" id="nube6" src="images/nube.png">
+            <img class = "nube" id="nube7" src="images/nube.png">
+            <img class = "nube" id="nube8" src="images/nube.png">
+        </div>
+        
+        <!--Log out button-->
+        <button id ="logout" type="button" onclick="window.location.href='login.html';">Sign out</button>
+        
+        <div class = "left_side_square">
+            <!--Central message of the left side square-->
+            <h1>Administrator Operations</h1> 
+            <!--Options that the Administrator can choose from-->    
+            <h2 class="optionClassTag">User Management:</h2> 
+                <button class="option" type="button" id="addUser" onclick="window.location.href='addUser.html';">Add User</button>
+                <button class="option" type="button" id="active">List Of User</button>
+            
+            <h2 class="optionClassTag">Product Management:</h2> 
+                <button class="option" type="button" onclick="window.location.href='sellProductAdmin.html';">Add Product</button>
+                <button class="option" type="button" onclick="window.location.href='listProducts.html';">List Of Products</button>
+            
+            <h2 class="optionClassTag">Department Management:</h2>
+                <button class="option" type="button" onclick="window.location.href='addDepartment.html';">Add Department</button>
+                <button class="option" type="button" onclick="window.location.href='listDepartments.html';">List Of Departments</button>
+        </div>
+        
+        <img class = "background" src="images/Bids.png">
+        
+        <div class = "right_side_square">
+            <!--User List Filter Section-->
+            <div class="filter">
+                <form action="usersFilter.jsp" method="post">
+                    <select name="search_filter" class="search_filter">
+                        <option value="">All Users</option>
+                        <option value="Active">Active Users</option>
+                        <option value="Inactive">Inactive Users</option>
+                    </select>
+                    <button type="submit" class="filter_button" title="Filter"><i class="fa fa-filter" aria-hidden="true"></i></button>
+                </form>
+            </div>
+            <!--Error Message
+            <p id="error">No user found with the specified filter. Try another one...</p>-->
+            <!--User List Section-->
+            <table>
+                <tr>
+                    <td> username1012345678910</td>
+                    <td>
+                        <form action="modifyUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="editButton" title="Edit User"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="inactiveButton" title="Make User Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>            
+                <!----><tr>
+                    <td> username2 </td>
+                    <td>
+                        <form action="modifyUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="editButton" title="Edit User"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="inactiveButton" title="Make User Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> username3 </td>
+                    <td>
+                        <form action="modifyUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="editButton" title="Edit User"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="inactiveButton" title="Make User Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> username4</td>
+                    <td>
+                        <form action="modifyUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="editButton" title="Edit User"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="inactiveButton" title="Make User Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> username5</td>
+                    <td>
+                        <form action="modifyUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="editButton" title="Edit User"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="inactiveButton" title="Make User Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> username6</td>
+                    <td>
+                        <form action="modifyUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="editButton" title="Edit User"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="inactiveButton" title="Make User Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> username7</td>
+                    <td>
+                        <form action="modifyUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="editButton" title="Edit User"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="inactiveButton" title="Make User Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> username8</td>
+                    <td>
+                        <form action="modifyUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="editButton" title="Edit User"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="inactiveButton" title="Make User Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> username9</td>
+                    <td>
+                        <form action="modifyUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="editButton" title="Edit User"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="inactiveButton" title="Make User Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> username#</td>
+                    <td>
+                        <form action="modifyUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="editButton" title="Edit User"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="inactiveButton" title="Make User Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> username#</td>
+                    <td>
+                        <form action="modifyUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="editButton" title="Edit User"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="inactiveButton" title="Make User Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> username#</td>
+                    <td>
+                        <form action="modifyUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="editButton" title="Edit User"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="inactiveButton" title="Make User Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> username#</td>
+                    <td>
+                        <form action="modifyUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="editButton" title="Edit User"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="inactiveButton" title="Make User Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> username#</td>
+                    <td>
+                        <form action="modifyUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="editButton" title="Edit User"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="inactiveButton" title="Make User Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> username#</td>
+                    <td>
+                        <form action="modifyUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="editButton" title="Edit User"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="inactiveButton" title="Make User Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> username#</td>
+                    <td>
+                        <form action="modifyUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="editButton" title="Edit User"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="inactiveButton" title="Make User Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> username#</td>
+                    <td>
+                        <form action="modifyUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="editButton" title="Edit User"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="inactiveButton" title="Make User Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> username#</td>
+                    <td>
+                        <form action="modifyUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="editButton" title="Edit User"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="inactiveButton" title="Make User Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td> username#</td>
+                    <td>
+                        <form action="modifyUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="editButton" title="Edit User"><i class="fa fa-pencil"></i></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="removeUser.jsp" method="post">
+                            <input type="hidden" name="userName" value="<%=userName%>">
+                            <button type="submit" class="inactiveButton" title="Make User Inactive"><i class="fa fa-ban" aria-hidden="true"></i></button>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
