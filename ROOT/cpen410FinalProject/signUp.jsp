@@ -8,7 +8,7 @@
         <!--Keywords of the web page, that search engines use to show the page-->
         <meta name="keywords" content="bid, Heaven of Bids, bids, puerto rico, bid web page, offers, discounts, good prices, signup">
         <!--Authors of the web page-->
-        <meta name="author" content="Alexis Carrasquillo, Alexis Rivera">
+        <meta name="author" content="a-carrasquillo, arivesan">
         <!--Define the title of the page-->
         <title>Heaven of Bids Signup</title>
         <!--Importing the CSS style sheet-->
